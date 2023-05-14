@@ -15,12 +15,19 @@
 #include "config.h"
 
 /* private variables */
-static char *mem_start_brk;  /* points to first byte of heap */
-static char *mem_brk;        /* points to last byte of heap */
-static char *mem_max_addr;   /* largest legal heap address */ 
+static char *mem_start_brk;  /* points to first byte of heap (in book: mem_heap)*/
+static char *mem_brk;        /* points to last byte of heap (in book)plus 1*/
+static char *mem_max_addr;   /* largest legal heap address (in book)plus 1*/ 
+
+/*
+bytes mem_start_brk between mem_brk : allocated virtual meory
+bytes following mem_brk : unallocated virtual meory
+*/
 
 /* 
  * mem_init - initialize the memory system model
+ * models the virtual memory avaible to the heap 
+ * as a large double-word aligned array of bytes
  */
 void mem_init(void)
 {
