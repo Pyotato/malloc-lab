@@ -22,16 +22,12 @@
  ********************************************************/
 
 team_t team = {
-    /* Team name */
-    "hyemin",
-    /* First member's full name */
-    "pyo",
-    /* First member's email address */
-    "hyemin@cs.cmu.edu",
-    /* Second member's full name (leave blank if none) */
-    "",
-    /* Second member's email address (leave blank if none) */
-    ""};
+  "jungle",
+  "Hyemin Pyo",
+  "pyolovely01@gmail.com",
+  "",
+  "",
+};
 
 //* Basic constants and macros: */
 #define WSIZE      sizeof(void *) /* Word and header/footer size (bytes) */
