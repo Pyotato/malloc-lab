@@ -70,7 +70,7 @@ To get a list of the driver flags:
 
 # malloc-lab
 
-> **COMP 221 Project 5: Malloc Dynamic Memory Allocator :** An implementation of malloc in C using explicit free list, as according to the lab assignment of CS-APP book , reaching 91 % efficiency.
+> **COMP 221 Project 5: Malloc Dynamic Memory Allocator :** An implementation of malloc in C using explicit free list, as according to the lab assignment of CS-APP book , reaching 88 % efficiency.
 
 ---
 
@@ -168,3 +168,44 @@ Headers and Footer have been kept as such in the program. It has the following s
 
 - Coalescing scheme is immediate coalescing using boundary tag coalescing.
 - Searching through free list executes first fit algorithm.
+
+> ./mdriver -v short1-bal.rep
+> Perf index = 46 (util) + 40 (thru) = 86/100
+
+| trace         | valid  | util      | ops      | secs             | Kops   |
+| ------------- | ------ | --------- | -------- | ---------------- | ------ |
+| trace         | valid  | util      | ops      | secs             | Kops   |
+| :------------ | :----: | :-------: | -----:   | ---------------: | -----: |
+| 0             | yes    | 90%       | 5694     | 0.000232         | 24735  |
+| 1             | yes    | 82%       | 5848     | 0.000171         | 34179  |
+| 2             | yes    | 92%       | 6648     | 0.000343         | 20012  |
+| 3             | yes    | 92%       | 5380     | 0.000304         | 17981  |
+| 4             | yes    | 99%       | 14400    | 0.000220         | 64257  |
+| 5             | yes    | 88%       | 4800     | 0.000554         | 8638   |
+| 6             | yes    | 85%       | 4800     | 0.000575         | 8490   |
+| 7             | yes    | 55%       | 12000    | 0.000364         | 34149  |
+| 8             | yes    | 51%       | 24000    | 0.000468         | 50794  |
+| 9             | yes    | 93%       | 14401    | 0.000263         | 53298  |
+| 10            | yes    | 21%       | 14401    | 0.000270         | 53377  |
+| Total         |        | 0.003755  | 0.003755 | 0.003755         | 30032  |
+
+> summary: /mdriver -v short2-bal.rep
+>
+> - Perf index = 46 (util) + 40 (thru) = 86/100
+
+| trace         | valid  | util      | ops    | secs             | Kops   |
+| ------------- | ------ | --------- | ------ | ---------------- | ------ |
+| trace         | valid  | util      | ops    | secs             | Kops   |
+| :------------ | :----: | :-------: | -----: | ---------------: | -----: |
+| 0             | yes    | 90%       | 5694   | 0.000232         | 24585  |
+| 1             | yes    | 82%       | 5848   | 0.000171         | 34099  |
+| 2             | yes    | 92%       | 6648   | 0.000343         | 19410  |
+| 3             | yes    | 92%       | 5380   | 0.000304         | 17715  |
+| 4             | yes    | 99%       | 14400  | 0.000220         | 65484  |
+| 5             | yes    | 88%       | 4800   | 0.000554         | 8664   |
+| 6             | yes    | 85%       | 4800   | 0.000575         | 8343   |
+| 7             | yes    | 55%       | 12000  | 0.000364         | 32958  |
+| 8             | yes    | 51%       | 24000  | 0.000468         | 51238  |
+| 9             | yes    | 93%       | 14401  | 0.000263         | 54757  |
+| 10            | yes    | 21%       | 14401  | 0.000261         | 55261  |
+| Total         |        | 77%       | 112372 | 0.003755         | 29929  |
