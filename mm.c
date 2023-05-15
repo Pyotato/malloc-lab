@@ -21,11 +21,19 @@
 // mdriver 구동을 위한 team정보 struct 설정
 team_t team = {
     /* Team name */
+<<<<<<< HEAD
     "jungle",
     /* First member's full name */
     "hyemin Pyo",
     /* First member's email address */
     "pyolovely01@gmail.com",
+=======
+    "hyemin",
+    /* First member's full name */
+    "pyo",
+    /* First member's email address */
+    "hyemin@cs.cmu.edu",
+>>>>>>> 508c3cfb887e68120a48b131795b0791e1461c76
     /* Second member's full name (leave blank if none) */
     "",
     /* Second member's email address (leave blank if none) */
@@ -171,12 +179,21 @@ static void place(void *bp, size_t asize){ // 요청한 블록을 가용 블록�
     }
     else {
         asize = DSIZE* ( (size + (DSIZE)+ (DSIZE-1)) / DSIZE );
+<<<<<<< HEAD
     }
     /* fit에 맞는 free 리스트를 찾는다.*/
     if ((bp = find_fit(asize)) != NULL){
         place(bp,asize);
         return bp;
     }
+=======
+    }
+    /* fit에 맞는 free 리스트를 찾는다.*/
+    if ((bp = find_fit(asize)) != NULL){
+        place(bp,asize);
+        return bp;
+    }
+>>>>>>> 508c3cfb887e68120a48b131795b0791e1461c76
     /* fit 맞는게 없다. 메모리를 더 가져와 block을 위치시킨다.*/
     extendsize = MAX(asize,CHUNKSIZE);
     if ( (bp=extend_heap(extendsize/WSIZE)) == NULL){
@@ -210,6 +227,7 @@ void *mm_realloc(void *ptr, size_t size)
     return newptr;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -222,3 +240,5 @@ void *mm_realloc(void *ptr, size_t size)
 
 
 
+=======
+>>>>>>> 508c3cfb887e68120a48b131795b0791e1461c76
