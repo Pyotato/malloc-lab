@@ -169,7 +169,8 @@ Headers and Footer have been kept as such in the program. It has the following s
 - Coalescing scheme is immediate coalescing using boundary tag coalescing.
 - Searching through free list executes first fit algorithm.
 
-> ./mdriver -v short1-bal.rep
+> summary: ./mdriver -v short1-bal.rep
+>
 > Perf index = 46 (util) + 40 (thru) = 86/100
 
 | trace | valid |   util   |      ops |     secs |  Kops |
@@ -187,7 +188,7 @@ Headers and Footer have been kept as such in the program. It has the following s
 | 10    |  yes  |   21%    |    14401 | 0.000270 | 53377 |
 | Total |       | 0.003755 | 0.003755 | 0.003755 | 30032 |
 
-> summary: /mdriver -v short2-bal.rep
+> summary: ./mdriver -v short2-bal.rep
 >
 > - Perf index = 46 (util) + 40 (thru) = 86/100
 
