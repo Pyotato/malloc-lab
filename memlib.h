@@ -1,6 +1,7 @@
 #include <unistd.h>
-
-void mem_init(void);               
+/*allocator is in mm.c, 
+users can complie and link into their applications*/
+void mem_init(void);       //init allocator, return successful?  0 : -1        
 void mem_deinit(void);
 void *mem_sbrk(int incr);
 void mem_reset_brk(void); 
