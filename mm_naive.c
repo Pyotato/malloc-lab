@@ -1,11 +1,5 @@
-
 /*
  * mm-naive.c - The fastest, least memory-efficient malloc package.
- * @ main mm.c contains the naive approach. 
- * please check other branches for other implementations!
- * 
- * @ main브랜치의 mm.c는 컴퓨터 시스템 교재의 naive 방식으로 구현된 코드입니다.
- * 다른 방식의 구현결과를 테스트하고 싶다면 다른 브랜치들을 참고해주세요.
  * 
  * Perf index = 44 (util) + 9 (thru) = 54/100
  * 

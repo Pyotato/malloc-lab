@@ -1,12 +1,12 @@
 /*
- * mm-seglist
+ * mm-seglist.c
  * 
  * Perf index = 58 (util) + 40 (thru) = 98/100
  * 
  * Block Format: Minimum size is 16 bytes.
  *  - Free-Block Format: [Header - Pred - Succ - (Empty) - Footer]
  *  - Allocated-Block Format: [Header - Payload - Footer]
- *  - Header/Footer: 1-word holds size of the block and allocation-bit at LSB
+ *  - Header/Footer: 1-word holds size of the block and allocation-bit at LSB(Least Significant Bit)
  *  - Pred: 1-word holds the address of the predecessor free-block.
  *  - Succ: 1-word holds the address of the successor free-block.
  * 
@@ -185,7 +185,7 @@ int mm_init(void) {
 
   seglist = heap;
   heap = MOVE_WORD(heap, SEGLIST_NUM);
-  // initailize the seglist
+  // initialize the seglist
   for(int i = 0; i < SEGLIST_NUM; ++i){
     seglist[i] = NULL;
   }
