@@ -1,4 +1,8 @@
-/* Blocks are aligned to double-word boundaries.  This
+/* mm-explicit.c
+ * 
+ * Perf index = 46 (util) + 40 (thru) = 86/100
+ * 
+ * Blocks are aligned to double-word boundaries.  This
  * yields 8-byte aligned blocks on a 32-bit processor, and 16-byte aligned
  * blocks on a 64-bit processor.  However, 16-byte alignment is stricter
  * than necessary; the assignment only requires 8-byte alignment.  The
@@ -22,7 +26,7 @@
  ********************************************************/
 
 team_t team = {
-  "jungle",
+  "team 1",
   "Hyemin Pyo",
   "pyolovely01@gmail.com",
   "",
